@@ -1,0 +1,82 @@
+.root {
+  flex-direction: row;
+  display: flex;
+  width: auto;
+  height: auto;
+  max-width: 1080px;
+  position: relative;
+  padding: 0px;
+}
+.root > :global(.__wab_flex-container) {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: calc(0px - 8px);
+  width: calc(100% + 8px);
+}
+.root > :global(.__wab_flex-container) > *,
+.root > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.root > :global(.__wab_flex-container) > picture > img,
+.root > :global(.__wab_flex-container) > :global(.__wab_slot) > picture > img {
+  margin-left: 8px;
+}
+.rootselected > :global(.__wab_flex-container) {
+  margin-left: calc(0px - 8px);
+  width: calc(100% + 8px);
+  margin-top: calc(0px - 0px);
+  height: calc(100% + 0px);
+}
+.rootselected > :global(.__wab_flex-container) > *,
+.rootselected > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.rootselected > :global(.__wab_flex-container) > picture > img,
+.rootselected
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 8px;
+  margin-top: 0px;
+}
+.h2__aJcxR {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background: var(--token-w9-U0XSzT);
+  flex-shrink: 0;
+  border-radius: 32px;
+  border: 1px solid var(--token-KoT8W7skS);
+}
+.h2selected__aJcxRCqzL2 {
+  color: var(--token-3SJrINat2);
+  border-width: 2px;
+  border-color: var(--token-WtxzJLqpx);
+}
+.slotTargetEventTitle5 {
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+  color: var(--token-KoT8W7skS);
+}
+.slotTargetEventTitle5selected {
+  color: var(--token-3SJrINat2);
+}
+.h2__t2M4U {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  min-width: 0;
+}
+.slotTargetEventTitle4 {
+  font-size: 22px;
+  font-weight: 500;
+  text-align: left;
+  color: var(--token-KoT8W7skS);
+}
+.slotTargetEventTitle4selected {
+  color: var(--token-3SJrINat2);
+}

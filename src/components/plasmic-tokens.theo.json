@@ -1,0 +1,99 @@
+{
+  "props": [
+    {
+      "name": "Black",
+      "type": "color",
+      "value": "#000000",
+      "category": "color",
+      "meta": {
+        "projectId": "kJshciSJnYYFfXZkFQ39on",
+        "id": "3SJrINat2"
+      }
+    },
+    {
+      "name": "Blueish",
+      "type": "color",
+      "value": "#0074FF",
+      "category": "color",
+      "meta": {
+        "projectId": "kJshciSJnYYFfXZkFQ39on",
+        "id": "WtxzJLqpx"
+      }
+    },
+    {
+      "name": "BorderShade",
+      "type": "color",
+      "value": "#D4D8D9",
+      "category": "color",
+      "meta": {
+        "projectId": "kJshciSJnYYFfXZkFQ39on",
+        "id": "92oqTiNW0"
+      }
+    },
+    {
+      "name": "BrandGold",
+      "type": "color",
+      "value": "#ECB100",
+      "category": "color",
+      "meta": {
+        "projectId": "kJshciSJnYYFfXZkFQ39on",
+        "id": "4-FEG9aDP"
+      }
+    },
+    {
+      "name": "MildGray",
+      "type": "color",
+      "value": "#999C9D",
+      "category": "color",
+      "meta": {
+        "projectId": "kJshciSJnYYFfXZkFQ39on",
+        "id": "KoT8W7skS"
+      }
+    },
+    {
+      "name": "PinkRose",
+      "type": "color",
+      "value": "#D5006E",
+      "category": "color",
+      "meta": {
+        "projectId": "kJshciSJnYYFfXZkFQ39on",
+        "id": "kTbAlGYoP"
+      }
+    },
+    {
+      "name": "Silver",
+      "type": "color",
+      "value": "#FAFAFA",
+      "category": "color",
+      "meta": {
+        "projectId": "kJshciSJnYYFfXZkFQ39on",
+        "id": "RTfEpJ4ED"
+      }
+    },
+    {
+      "name": "UnnamedStyleToken",
+      "type": "color",
+      "value": "#00FF20",
+      "category": "color",
+      "meta": {
+        "projectId": "kJshciSJnYYFfXZkFQ39on",
+        "id": "e8O_VJs3M"
+      }
+    },
+    {
+      "name": "White",
+      "type": "color",
+      "value": "#FFFFFF",
+      "category": "color",
+      "meta": {
+        "projectId": "kJshciSJnYYFfXZkFQ39on",
+        "id": "w9-U0XSzT"
+      }
+    }
+  ],
+  "global": {
+    "meta": {
+      "source": "plasmic.app"
+    }
+  }
+}
