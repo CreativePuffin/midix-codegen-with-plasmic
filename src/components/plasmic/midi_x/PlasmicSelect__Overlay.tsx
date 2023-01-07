@@ -74,6 +74,14 @@ export interface DefaultSelect__OverlayProps
   children?: React.ReactNode;
 }
 
+const __wrapUserFunction =
+  globalThis.__PlasmicWrapUserFunction ?? ((loc, fn) => fn());
+const __wrapUserPromise =
+  globalThis.__PlasmicWrapUserPromise ??
+  (async (loc, promise) => {
+    await promise;
+  });
+
 function PlasmicSelect__Overlay__RenderFunc(props: {
   variants: PlasmicSelect__Overlay__VariantsArgs;
   args: PlasmicSelect__Overlay__ArgsType;

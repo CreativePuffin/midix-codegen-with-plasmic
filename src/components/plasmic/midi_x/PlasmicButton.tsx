@@ -148,6 +148,14 @@ export interface DefaultButtonProps extends pp.BaseButtonProps {
   layout?: SingleChoiceArg<"vertical" | "leftSided" | "rightSided">;
 }
 
+const __wrapUserFunction =
+  globalThis.__PlasmicWrapUserFunction ?? ((loc, fn) => fn());
+const __wrapUserPromise =
+  globalThis.__PlasmicWrapUserPromise ??
+  (async (loc, promise) => {
+    await promise;
+  });
+
 function PlasmicButton__RenderFunc(props: {
   variants: PlasmicButton__VariantsArgs;
   args: PlasmicButton__ArgsType;

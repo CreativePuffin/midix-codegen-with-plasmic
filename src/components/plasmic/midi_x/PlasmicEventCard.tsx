@@ -47,17 +47,20 @@ export type PlasmicEventCard__VariantMembers = {
   orentation: "orentation";
   size: "stretch";
   showHeader: "showHeader";
+  hideCardInfo: "hideCardInfo";
 };
 export type PlasmicEventCard__VariantsArgs = {
   orentation?: SingleBooleanChoiceArg<"orentation">;
   size?: MultiChoiceArg<"stretch">;
   showHeader?: SingleBooleanChoiceArg<"showHeader">;
+  hideCardInfo?: SingleBooleanChoiceArg<"hideCardInfo">;
 };
 type VariantPropType = keyof PlasmicEventCard__VariantsArgs;
 export const PlasmicEventCard__VariantProps = new Array<VariantPropType>(
   "orentation",
   "size",
-  "showHeader"
+  "showHeader",
+  "hideCardInfo"
 );
 
 export type PlasmicEventCard__ArgsType = {
@@ -110,8 +113,17 @@ export interface DefaultEventCardProps {
   orentation?: SingleBooleanChoiceArg<"orentation">;
   size?: MultiChoiceArg<"stretch">;
   showHeader?: SingleBooleanChoiceArg<"showHeader">;
+  hideCardInfo?: SingleBooleanChoiceArg<"hideCardInfo">;
   className?: string;
 }
+
+const __wrapUserFunction =
+  globalThis.__PlasmicWrapUserFunction ?? ((loc, fn) => fn());
+const __wrapUserPromise =
+  globalThis.__PlasmicWrapUserPromise ??
+  (async (loc, promise) => {
+    await promise;
+  });
 
 function PlasmicEventCard__RenderFunc(props: {
   variants: PlasmicEventCard__VariantsArgs;
@@ -163,6 +175,11 @@ function PlasmicEventCard__RenderFunc(props: {
         path: "showHeader",
         type: "private",
         initFunc: ($props, $state, $ctx) => $props.showHeader
+      },
+      {
+        path: "hideCardInfo",
+        type: "private",
+        initFunc: ($props, $state, $ctx) => $props.hideCardInfo
       }
     ],
     [$props, $ctx]
@@ -411,13 +428,20 @@ function PlasmicEventCard__RenderFunc(props: {
             ) : null}
           </div>
 
-          {true ? (
+          {(
+            hasVariant($state, "hideCardInfo", "hideCardInfo") ? true : true
+          ) ? (
             <p.Stack
               as={"div"}
               data-plasmic-name={"descriptionBox"}
               data-plasmic-override={overrides.descriptionBox}
               hasGap={true}
               className={classNames(projectcss.all, sty.descriptionBox, {
+                [sty.descriptionBoxhideCardInfo]: hasVariant(
+                  $state,
+                  "hideCardInfo",
+                  "hideCardInfo"
+                ),
                 [sty.descriptionBoxorentation]: hasVariant(
                   $state,
                   "orentation",

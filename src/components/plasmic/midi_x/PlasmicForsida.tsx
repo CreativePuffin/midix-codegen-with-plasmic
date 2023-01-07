@@ -81,6 +81,14 @@ export interface DefaultForsidaProps {
   className?: string;
 }
 
+const __wrapUserFunction =
+  globalThis.__PlasmicWrapUserFunction ?? ((loc, fn) => fn());
+const __wrapUserPromise =
+  globalThis.__PlasmicWrapUserPromise ??
+  (async (loc, promise) => {
+    await promise;
+  });
+
 function PlasmicForsida__RenderFunc(props: {
   variants: PlasmicForsida__VariantsArgs;
   args: PlasmicForsida__ArgsType;
@@ -153,6 +161,7 @@ function PlasmicForsida__RenderFunc(props: {
               >
                 <EventCard
                   className={classNames("__wab_instance", sty.eventCard__ydY5A)}
+                  hideCardInfo={true}
                   image={{
                     src: image4GpdXmTtWf,
                     fullWidth: 3200,
@@ -166,6 +175,7 @@ function PlasmicForsida__RenderFunc(props: {
 
                 <EventCard
                   className={classNames("__wab_instance", sty.eventCard__fb2Km)}
+                  hideCardInfo={true}
                   link={`/events/event`}
                   size={["stretch"]}
                 />

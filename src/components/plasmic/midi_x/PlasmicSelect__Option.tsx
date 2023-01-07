@@ -76,6 +76,14 @@ export type PlasmicSelect__Option__OverridesType = {
 
 export interface DefaultSelect__OptionProps extends pp.BaseSelectOptionProps {}
 
+const __wrapUserFunction =
+  globalThis.__PlasmicWrapUserFunction ?? ((loc, fn) => fn());
+const __wrapUserPromise =
+  globalThis.__PlasmicWrapUserPromise ??
+  (async (loc, promise) => {
+    await promise;
+  });
+
 function PlasmicSelect__Option__RenderFunc(props: {
   variants: PlasmicSelect__Option__VariantsArgs;
   args: PlasmicSelect__Option__ArgsType;

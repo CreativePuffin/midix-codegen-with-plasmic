@@ -69,6 +69,14 @@ export interface DefaultNavbarProps {
   className?: string;
 }
 
+const __wrapUserFunction =
+  globalThis.__PlasmicWrapUserFunction ?? ((loc, fn) => fn());
+const __wrapUserPromise =
+  globalThis.__PlasmicWrapUserPromise ??
+  (async (loc, promise) => {
+    await promise;
+  });
+
 function PlasmicNavbar__RenderFunc(props: {
   variants: PlasmicNavbar__VariantsArgs;
   args: PlasmicNavbar__ArgsType;

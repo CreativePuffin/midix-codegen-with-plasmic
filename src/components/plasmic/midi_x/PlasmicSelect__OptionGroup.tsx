@@ -76,6 +76,14 @@ export interface DefaultSelect__OptionGroupProps
   noTitle?: SingleBooleanChoiceArg<"noTitle">;
 }
 
+const __wrapUserFunction =
+  globalThis.__PlasmicWrapUserFunction ?? ((loc, fn) => fn());
+const __wrapUserPromise =
+  globalThis.__PlasmicWrapUserPromise ??
+  (async (loc, promise) => {
+    await promise;
+  });
+
 function PlasmicSelect__OptionGroup__RenderFunc(props: {
   variants: PlasmicSelect__OptionGroup__VariantsArgs;
   args: PlasmicSelect__OptionGroup__ArgsType;

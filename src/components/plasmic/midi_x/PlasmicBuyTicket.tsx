@@ -118,6 +118,14 @@ export interface DefaultBuyTicketProps {
   className?: string;
 }
 
+const __wrapUserFunction =
+  globalThis.__PlasmicWrapUserFunction ?? ((loc, fn) => fn());
+const __wrapUserPromise =
+  globalThis.__PlasmicWrapUserPromise ??
+  (async (loc, promise) => {
+    await promise;
+  });
+
 function PlasmicBuyTicket__RenderFunc(props: {
   variants: PlasmicBuyTicket__VariantsArgs;
   args: PlasmicBuyTicket__ArgsType;

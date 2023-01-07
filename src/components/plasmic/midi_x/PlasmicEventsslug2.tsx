@@ -79,6 +79,14 @@ export interface DefaultEventsslug2Props {
   className?: string;
 }
 
+const __wrapUserFunction =
+  globalThis.__PlasmicWrapUserFunction ?? ((loc, fn) => fn());
+const __wrapUserPromise =
+  globalThis.__PlasmicWrapUserPromise ??
+  (async (loc, promise) => {
+    await promise;
+  });
+
 function PlasmicEventsslug2__RenderFunc(props: {
   variants: PlasmicEventsslug2__VariantsArgs;
   args: PlasmicEventsslug2__ArgsType;

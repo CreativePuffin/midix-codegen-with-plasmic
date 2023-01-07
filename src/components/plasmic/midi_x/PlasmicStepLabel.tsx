@@ -69,6 +69,14 @@ export interface DefaultStepLabelProps {
   className?: string;
 }
 
+const __wrapUserFunction =
+  globalThis.__PlasmicWrapUserFunction ?? ((loc, fn) => fn());
+const __wrapUserPromise =
+  globalThis.__PlasmicWrapUserPromise ??
+  (async (loc, promise) => {
+    await promise;
+  });
+
 function PlasmicStepLabel__RenderFunc(props: {
   variants: PlasmicStepLabel__VariantsArgs;
   args: PlasmicStepLabel__ArgsType;

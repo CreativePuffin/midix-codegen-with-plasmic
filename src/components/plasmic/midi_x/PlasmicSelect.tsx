@@ -135,6 +135,14 @@ const PlasmicSelectContext = React.createContext<
   | { variants: PlasmicSelect__VariantsArgs; args: PlasmicSelect__ArgsType }
 >(undefined);
 
+const __wrapUserFunction =
+  globalThis.__PlasmicWrapUserFunction ?? ((loc, fn) => fn());
+const __wrapUserPromise =
+  globalThis.__PlasmicWrapUserPromise ??
+  (async (loc, promise) => {
+    await promise;
+  });
+
 function PlasmicSelect__RenderFunc(props: {
   variants: PlasmicSelect__VariantsArgs;
   args: PlasmicSelect__ArgsType;

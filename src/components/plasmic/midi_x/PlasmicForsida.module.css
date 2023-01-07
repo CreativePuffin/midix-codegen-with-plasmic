@@ -61,12 +61,12 @@
 }
 .section___6Zzw2 {
   flex-direction: column;
+  display: flex;
   position: relative;
   width: 100%;
   height: auto;
   max-width: 100%;
   min-width: 0;
-  display: none;
   padding: 120px 72px 32px;
 }
 .section___6Zzw2 > :global(.__wab_flex-container) {

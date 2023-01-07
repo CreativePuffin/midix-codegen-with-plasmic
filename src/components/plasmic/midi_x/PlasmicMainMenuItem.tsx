@@ -83,6 +83,14 @@ export interface DefaultMainMenuItemProps {
   className?: string;
 }
 
+const __wrapUserFunction =
+  globalThis.__PlasmicWrapUserFunction ?? ((loc, fn) => fn());
+const __wrapUserPromise =
+  globalThis.__PlasmicWrapUserPromise ??
+  (async (loc, promise) => {
+    await promise;
+  });
+
 function PlasmicMainMenuItem__RenderFunc(props: {
   variants: PlasmicMainMenuItem__VariantsArgs;
   args: PlasmicMainMenuItem__ArgsType;
